@@ -13,6 +13,16 @@ impl Rectangle {
         return self.width > other.width && self.height > other.height;
     }
 
+    fn perimeter(&self) -> u32 {
+        return self.width * 2 + self.height * 2;
+    }
+}
+
+impl Rectangle {
+    fn new(width: u32, height: u32) -> Self {
+        return Self { width, height };
+    }
+
     fn square(size: u32) -> Self {
         return Self {
             width: size,
@@ -38,6 +48,10 @@ fn main() {
     };
 
     let square = Rectangle::square(23);
+
+    let rect = Rectangle::new(5, 10);
+    println!("rect is: {:?}", rect);
+    println!("perimeter of rect is: {}", rect.perimeter());
 
     println!("'rect1' can hold 'rect2'? {}", rect1.can_hold(&rect2));
     println!("'rect1' can hold 'rect3'? {}", rect1.can_hold(&rect3));

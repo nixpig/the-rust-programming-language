@@ -2,6 +2,23 @@ use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
 
+struct Guess {
+    value: i32,
+}
+
+impl Guess {
+    fn new(value: i32) -> Guess {
+        if value < 1 || value > 100 {
+            panic!("Number must be between 1-100. This is unrecoverable.");
+        }
+        return Guess { value };
+    }
+
+    pub fn value(&self) -> i32 {
+        return self.value;
+    }
+}
+
 fn main() {
     let max_guesses = 10;
     let max_range = 100;

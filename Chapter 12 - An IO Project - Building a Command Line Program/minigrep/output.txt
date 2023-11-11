@@ -1,0 +1,3 @@
+Searching for 'lorem' in: haystack.txt ...
+0: Aliquid et assumenda. Veritatis dolorem et. Praesentium perferendis aut et quam asperiores labore. In voluptates est illo quia id laboriosam odio accusantium. Voluptates excepturi perferendis ratione.
+

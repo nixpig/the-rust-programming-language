@@ -1,5 +1,11 @@
 use std::{thread, time::Duration};
 
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
 #[derive(Debug, PartialEq, Copy, Clone)]
 enum ShirtColour {
     Red,
@@ -85,4 +91,25 @@ fn main() {
     })
     .join()
     .unwrap();
+
+    let mut rects = vec![
+        Rectangle {
+            width: 3,
+            height: 9,
+        },
+        Rectangle {
+            width: 1,
+            height: 5,
+        },
+        Rectangle {
+            width: 7,
+            height: 3,
+        },
+    ];
+
+    println!("{:?}", rects);
+
+    rects.sort_by_key(|x| x.width);
+
+    println!("{:?}", rects);
 }
